@@ -3,13 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SELARI LLC Apps</title>
+<title>SELARI Apps</title>
+<meta name="description" content="Simple, private mobile apps by SELARI LLC.">
+<link rel="icon" href="papersnap-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7faf9;--card:#fff;--ink:#14191f;--muted:#5b6470;--brand:#0F766E;--brand-2:#14b8a6;--accent:#F59E0B;--line:#e2e9e7;--glow:rgba(20,184,166,.18)}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1110;--card:#121b1a;--ink:#e8efed;--muted:#9aaba8;--brand:#2dd4bf;--brand-2:#5eead4;--line:#1f2d2a;--glow:rgba(45,212,191,.12)}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--brand)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
+.logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:15px}
+nav .links a{color:var(--muted);text-decoration:none;font-weight:500;margin-left:20px;font-size:15px}
+nav .links a:hover{color:var(--ink)}
+.hero{position:relative;padding:64px 0 56px;text-align:center}
+.hero:before{content:"";position:absolute;inset:-40px 0 auto;height:420px;background:radial-gradient(600px 260px at 50% 30%,var(--glow),transparent 70%);z-index:-1}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--brand);background:var(--card);border:1px solid var(--line);padding:5px 14px;border-radius:999px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:-.03em;margin:18px auto 14px;max-width:760px}
+h1 span{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:clamp(17px,2.2vw,19px);max-width:600px;margin:0 auto}
+.lead-fr{color:var(--muted);font-size:15px;margin:10px auto 0;max-width:600px;opacity:.85}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;padding:12px 22px;border-radius:12px}
+h2{font-size:28px;letter-spacing:-.02em;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 26px}
+section{padding:40px 0}
+.app{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 1px 0 rgba(0,0,0,.02),0 12px 40px -20px rgba(15,118,110,.25)}
+.app img{width:96px;height:96px;border-radius:22px;box-shadow:0 8px 24px -10px rgba(0,0,0,.35)}
+.app h3{margin:0;font-size:24px;letter-spacing:-.01em}
+.app .tag{color:var(--muted);margin:4px 0 16px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:0 0 20px;padding:0;list-style:none}
+.feats li{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:15px}
+.feats b{display:block;font-size:14px;color:var(--brand)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{text-decoration:none;font-size:14px;font-weight:600;border:1px solid var(--line);padding:7px 14px;border-radius:999px;background:var(--card)}
+.chips a:hover{border-color:var(--brand)}
+.soon{border:1px dashed var(--line);border-radius:22px;padding:26px;text-align:center;color:var(--muted);margin-top:18px}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.v{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.v .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--glow);color:var(--brand);margin-bottom:12px}
+.v h4{margin:0 0 4px;font-size:17px}
+.v p{margin:0;color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+@media (max-width:600px){.app{grid-template-columns:1fr;padding:22px}.app img{width:76px;height:76px;border-radius:18px}nav .links a{margin-left:14px}.hero{padding:40px 0}}
+</style>
 </head>
-<body style="font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px">
-<h1>SELARI LLC</h1>
-<ul>
-  <li><a href="/papersnap-legal/">PaperSnap PDF</a></li>
-</ul>
-<p>Contact: <a href="mailto:contact@selari.org">contact@selari.org</a></p>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="/"><i>S</i>SELARI</a>
+    <div class="links"><a href="#apps">Apps</a><a href="mailto:contact@selari.org">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <span class="eyebrow">Mobile apps by SELARI LLC</span>
+    <h1>Simple apps that <span>respect your privacy</span></h1>
+    <p class="lead">Fast, focused tools for everyday tasks. They work offline, and your files stay on your device.</p>
+    <p class="lead-fr" lang="fr">Des applications simples et rapides, qui fonctionnent hors ligne et gardent vos fichiers sur votre appareil.</p>
+    <a class="btn" href="#apps">See our apps ↓</a>
+  </header>
+
+  <section id="apps">
+    <h2>Our apps</h2>
+    <p class="sub">Available for iPhone and Android.</p>
+    <article class="app">
+      <img src="papersnap-icon.png" alt="PaperSnap PDF icon">
+      <div>
+        <h3>PaperSnap PDF</h3>
+        <p class="tag">Scan documents to PDF, then merge, compress and share. Works offline, no account needed.</p>
+        <ul class="feats">
+          <li><b>Scan</b>Auto page detection and perspective correction</li>
+          <li><b>Clean pages</b>Magic filter removes shadows</li>
+          <li><b>PDF tools</b>Merge, compress, split and reorder</li>
+          <li><b>Organize</b>Folders, search and quick sharing</li>
+        </ul>
+        <div class="chips">
+          <a href="/papersnap-legal/privacy.html">Privacy policy</a>
+          <a href="/papersnap-legal/delete-account.html">Delete account</a>
+          <a href="mailto:contact@selari.org?subject=PaperSnap%20support">Support</a>
+        </div>
+      </div>
+    </article>
+    <div class="soon">More apps are on the way.</div>
+  </section>
+
+  <section>
+    <h2>How we build</h2>
+    <p class="sub">Three rules we keep in every app.</p>
+    <div class="values">
+      <div class="v"><div class="ic">🔒</div><h4>Private by default</h4><p>Your documents and photos are processed on your device.</p></div>
+      <div class="v"><div class="ic">⚡</div><h4>Fast and offline</h4><p>No waiting on a server, and no connection needed for the core features.</p></div>
+      <div class="v"><div class="ic">✨</div><h4>Simple to use</h4><p>Clear screens and few steps, so you get the job done quickly.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 SELARI LLC</span>
+    <span><a href="mailto:contact@selari.org">contact@selari.org</a></span>
+  </footer>
+</div>
 </body>
 </html>
